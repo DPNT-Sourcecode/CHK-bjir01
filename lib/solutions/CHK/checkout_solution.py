@@ -12,13 +12,15 @@ def checkout(skus):
         "B" : 30,
         "C" : 20,
         "D" : 15,
-        "E" : 40
+        "E" : 40,
+        "F" : 10
     }
 
     bundle_offers = {
 
         "A" : [(5, 200), (3, 130)],
-        "B" : [(2, 45)]
+        "B" : [(2, 45)],
+        "F" : [(3, 20)]
     }
 
     free_item_offers = {
@@ -62,4 +64,5 @@ def checkout(skus):
             basket_total += items * price
 
     return basket_total 
+
 
