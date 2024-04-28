@@ -56,7 +56,7 @@ def checkout(skus):
     }
    
     group_item_offers = {
-       "STZYX" : (3, 45)
+       "ZSTYX" : (3, 45)
 
    }
 
@@ -122,4 +122,5 @@ def checkout(skus):
             basket_total += items * price
 
     return basket_total 
+
 

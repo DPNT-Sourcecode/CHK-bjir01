@@ -28,9 +28,12 @@ class TestCheckout():
 
         assert checkout_solution.checkout('STX') == 45
         assert checkout_solution.checkout('STXS') == 62
+        assert checkout_solution.checkout('SSSZ') == 65
+        assert checkout_solution.checkout('ZZZS') == 65
 
         assert checkout_solution.checkout('AxBA') == -1
         assert checkout_solution.checkout(5) == -1
+
 
 
 
