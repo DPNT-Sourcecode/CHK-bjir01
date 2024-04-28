@@ -8,5 +8,9 @@ class TestCheckout():
         assert checkout_solution.checkout('AAAA') == 180
         assert checkout_solution.checkout('AABA') == 160
         assert checkout_solution.checkout('AABA') == 160
+        assert checkout_solution.checkout('AFBA') == -1
+        assert checkout_solution.checkout(5) == -1
+
+
 
 

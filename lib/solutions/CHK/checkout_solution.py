@@ -3,6 +3,10 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
+
+    if type(skus) != str:
+        return -1
+
     sku_price = {
         "A" : 50,
         "B" : 30,
@@ -39,6 +43,7 @@ def checkout(skus):
             basket_total += items * price
 
     return basket_total 
+
 
 
 
