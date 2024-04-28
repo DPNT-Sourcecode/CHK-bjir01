@@ -22,8 +22,13 @@ class TestCheckout():
         assert checkout_solution.checkout('EEBB') == 110
         assert checkout_solution.checkout('EEBBB') == 125
 
-        assert checkout_solution.checkout('AFBA') == -1
+        assert checkout_solution.checkout('FFF') == 20
+        assert checkout_solution.checkout('FFFF') == 30
+        assert checkout_solution.checkout('FFFFFF') == 40
+
+        assert checkout_solution.checkout('ALBA') == -1
         assert checkout_solution.checkout(5) == -1
+
 
 
 
