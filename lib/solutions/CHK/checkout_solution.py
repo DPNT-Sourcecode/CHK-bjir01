@@ -51,13 +51,17 @@ def checkout(skus):
         price = sku_price[sku]
 
         if sku in bundle_offers:
-            bundle, disc_price = bundle_offers[sku]
-            valid_bundles = items // bundle
-            leftover_items = items % bundle
-            basket_total += (valid_bundles * disc_price) + (leftover_items * price)
+            leftover_items = items
+            for bundle in bundle_offers[sku]:
+                bundle, disc_price = bundle_offers[sku]
+                valid_bundles = leftover_items // bundle
+                leftover_items = items % bundle
+                basket_total += (valid_bundles * disc_price)
+            basket_total +=  (leftover_items * price)
         else:
             basket_total += items * price
 
     return basket_total 
+
 
 
