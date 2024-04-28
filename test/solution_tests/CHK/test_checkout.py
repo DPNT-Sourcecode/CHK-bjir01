@@ -26,8 +26,9 @@ class TestCheckout():
         assert checkout_solution.checkout('FFFF') == 30
         assert checkout_solution.checkout('FFFFFF') == 40
 
-        assert checkout_solution.checkout('ALBA') == -1
+        assert checkout_solution.checkout('AxBA') == -1
         assert checkout_solution.checkout(5) == -1
+
 
 
 
