@@ -18,7 +18,7 @@ def checkout(skus):
         "H" : 10,
         "I" : 35,
         "J" : 60,
-        "K" : 80,
+        "K" : 70,
         "L" : 90,
         "M" : 15,
         "N" : 40,
@@ -26,14 +26,14 @@ def checkout(skus):
         "P" : 50,
         "Q" : 30,
         "R" : 50,
-        "S" : 30,
+        "S" : 20,
         "T" : 20,
         "U" : 40,
         "V" : 50,
         "W" : 20,
-        "X" : 90,
-        "Y" : 10,
-        "Z" : 50
+        "X" : 17,
+        "Y" : 20,
+        "Z" : 21
     }
 
     bundle_offers = {
@@ -54,7 +54,11 @@ def checkout(skus):
         "N": (3, 'M'),
         "R": (3, 'Q')
     }
-    #skus_list = skus.split(',')
+   
+    group_item_offers = {
+       "STXYZ" : (3, 45)
+
+   }
 
     sku_items = {}
 
@@ -92,4 +96,5 @@ def checkout(skus):
             basket_total += items * price
 
     return basket_total 
+
 
