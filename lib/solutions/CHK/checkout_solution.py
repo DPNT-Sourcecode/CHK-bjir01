@@ -42,7 +42,7 @@ def checkout(skus):
         "B" : [(2, 45)],
         "F" : [(3, 20)],
         "H" : [(10, 80), (5, 45)],
-        "K" : [(2, 150)],
+        "K" : [(2, 120)],
         "P" : [(5, 200)],
         "Q" : [(3, 80)],
         "U" : [(4, 120)],
@@ -122,6 +122,4 @@ def checkout(skus):
             basket_total += items * price
 
     return basket_total 
-
-
 
