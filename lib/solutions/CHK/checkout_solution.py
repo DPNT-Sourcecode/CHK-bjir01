@@ -56,7 +56,7 @@ def checkout(skus):
     }
    
     group_item_offers = {
-       "STXYZ" : (3, 45)
+       "STZYX" : (3, 45)
 
    }
 
@@ -68,6 +68,32 @@ def checkout(skus):
         sku_items[sku] = sku_items.get(sku,0) + 1
     
     basket_total = 0
+
+    '''
+    Handle the group items from basket before calculating total
+    '''
+
+    for sku_list, offer in group_item_offers.items():
+        grouped_items, disc_price = offer
+    
+        total_group = 0
+        for sku in sku_list:
+            total_group += sku_items.get(sku, 0)
+        
+        valid_group = total_group // grouped_items
+
+        basket_total += valid_group * disc_price
+
+        deduct_items = valid_group * grouped_items
+
+        for sku in sku_list:
+            if sku in sku_items:
+                sku_count = sku_items[sku]
+                sku_items[sku] = max(sku_count-deduct_items, 0)
+                deduct_items = max(deduct_items - sku_count, 0)
+
+
+
 
     '''
     Deduct the free items from basket before calculating total
@@ -96,5 +122,6 @@ def checkout(skus):
             basket_total += items * price
 
     return basket_total 
+
 
 
