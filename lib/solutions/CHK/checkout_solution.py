@@ -55,7 +55,7 @@ def checkout(skus):
             for bundle in bundle_offers[sku]:
                 bundle_count, disc_price = bundle
                 valid_bundles = leftover_items // bundle_count
-                leftover_items = items % bundle_count
+                leftover_items = leftover_items % bundle_count
                 basket_total += (valid_bundles * disc_price)
             basket_total +=  (leftover_items * price)
         else:
@@ -63,7 +63,6 @@ def checkout(skus):
 
     return basket_total 
 
-checkout('AAAAA')
 
 
 
