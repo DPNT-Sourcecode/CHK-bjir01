@@ -16,11 +16,11 @@ def checkout(skus):
         "B" : (2, 45)
     }
 
-    skus_list = skus.split(',')
+    #skus_list = skus.split(',')
 
     sku_items = {}
 
-    for sku in skus_list:
+    for sku in skus:
         if sku not in sku_price:
             return -1
         sku_items[sku] = sku_items.get(sku,0) + 1
@@ -39,5 +39,6 @@ def checkout(skus):
             basket_total += items * price
 
     return basket_total 
+
 
 
