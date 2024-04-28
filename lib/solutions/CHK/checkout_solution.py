@@ -63,6 +63,7 @@ def checkout(skus):
 
     return basket_total 
 
+checkout('AAAAA')
 
 
 
